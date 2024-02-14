@@ -18,7 +18,7 @@ spring:
     host: smtp.resend.com
     port: 587
     username: resend
-    password: re_AJquhScs_2MZ6dkZnhMQnKxTK15N2eRye
+    password: ${RESEND_API_KEY}
     properties:
       mail:
         smtp.auth: true

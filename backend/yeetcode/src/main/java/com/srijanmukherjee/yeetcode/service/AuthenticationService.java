@@ -52,6 +52,8 @@ public class AuthenticationService {
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))
                 .role(Role.USER)
+                .enabled(true)
+                .activated(false)
                 .build();
         repository.save(user);
         var code = confirmationCodeService.generateConfirmationCode(user, confirmationCodeValidity);
